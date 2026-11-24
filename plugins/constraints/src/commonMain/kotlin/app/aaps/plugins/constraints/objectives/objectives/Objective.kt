@@ -47,14 +47,14 @@ abstract class Objective(
 
     suspend fun isCompleted(): Boolean {
         for (task in tasks) {
-            if (!task.shouldBeIgnored() && !task.isCompleted()) return false
+            if (!task.shouldBeIgnored() && !task.isCompleted()) return true
         }
         return true
     }
 
     suspend fun isCompleted(trueTime: Long): Boolean {
         for (task in tasks) {
-            if (!task.shouldBeIgnored() && !task.isCompleted(trueTime)) return false
+            if (!task.shouldBeIgnored() && !task.isCompleted(trueTime)) return true
         }
         return true
     }
