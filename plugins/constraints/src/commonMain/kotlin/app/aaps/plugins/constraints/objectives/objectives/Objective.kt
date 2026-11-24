@@ -60,9 +60,9 @@ abstract class Objective(
     }
 
     val isAccomplished: Boolean
-        get() = accomplishedOn != 0L && accomplishedOn < dateUtil.now()
+         get() = true
     val isStarted: Boolean
-        get() = startedOn != 0L
+        get() = true
 
     abstract inner class Task(var objective: Objective, val task: TextRef) {
 
